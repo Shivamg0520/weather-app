@@ -1,120 +1,93 @@
-# Weather App (CLI)
+# 🌦️ Weather App (API Practice)
 
-> A lightweight command-line Python tool that fetches current weather information for any city using WeatherAPI.
-
----
-
-## 🔍 About
-This is a small, easy-to-use CLI weather application written in Python. It calls the WeatherAPI (https://www.weatherapi.com/) to retrieve current weather data (temperature, conditions, humidity, wind, local time, etc.) for a city you specify.
-
-The included `weather_app.py` is a minimal example to help you learn working with APIs and building small utility scripts.
+This is a simple **Python-based Weather App** created while learning **API integration**.  
+It fetches real-time weather information of any city using the **[WeatherAPI](https://www.weatherapi.com/)**.
 
 ---
 
-## ✨ Features
-- Query current weather for any city.
-- Shows: city, region, country, timezone, local time, temperature (°C), condition, wind speed (kph), humidity, and "feels like" temperature.
-- Minimal dependencies (only `requests`).
+## 🚀 Features
+- Fetches **real-time weather data** for any city.
+- Displays details like city, region, country, temperature, condition, wind speed, humidity, and feels-like temperature.
+- Demonstrates **API calling**, **JSON handling**, and **error management** in Python.
+- Great for beginners learning to work with APIs.
 
 ---
 
-## 🚀 Quickstart
+## 🛠️ Tech Stack
+- **Python 3**
+- **Requests** (for API calls)
 
-### 1. Prerequisites
-- Python 3.8+
-- `requests` library
+---
 
-Install dependencies with:
-```bash
-pip install requests
+## 📂 Project Structure
 ```
-
-### 2. Get a WeatherAPI Key
-Sign up at https://www.weatherapi.com/ and get a free API key.
-
-### 3. Set your API key
-Open `weather_app.py` and replace:
-```py
-api_key = "API-KEY"  # Replace with your actual API key
-```
-with your real key, or modify the script to read the key from an environment variable:
-
-```py
-import os
-api_key = os.getenv("WEATHERAPI_KEY")
-```
-
-To set the environment variable (Linux/macOS):
-```bash
-export WEATHERAPI_KEY="your_real_key_here"
-```
-Windows (PowerShell):
-```powershell
-setx WEATHERAPI_KEY "your_real_key_here"
-```
-
-### 4. Run the app
-```bash
-python /path/to/weather_app.py
-```
-Then enter the city name when prompted, for example:
-```
-Enter city name: Mumbai
+.
+├── weather_app.py    # Main script to fetch and display weather information
 ```
 
 ---
 
-## 🧩 Suggested Improvements
-If you want to make it more production-ready, consider:
-- Read API key from an environment variable or config file (avoid hardcoding).
-- Add CLI arguments with `argparse` (e.g., `--city`, `--units`).
-- Add error handling for network/timeouts and invalid city names.
-- Allow output formats (plain text, JSON) for easier integration.
-- Add unit tests and CI (GitHub Actions).
+## ⚙️ How to Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/weather-app.git
+   cd weather-app
+   ```
+
+2. Install the required dependency:
+   ```bash
+   pip install requests
+   ```
+
+3. Get your **API key** from [WeatherAPI.com](https://www.weatherapi.com/).  
+   Replace `"API-KEY"` in `weather_app.py` with your actual key.
+
+4. Run the app:
+   ```bash
+   python weather_app.py
+   ```
+
+5. Enter any city name when prompted, for example:
+   ```bash
+   Enter city name: Delhi
+   ```
 
 ---
 
-## ♻️ Example output
+## 📝 Sample Output
 ```
-City: Mumbai
-Region: Maharashtra
+City: Delhi
+Region: Delhi
 Country: India
 Time Zone: Asia/Kolkata
-Local Time: 2025-10-05 14:20
-Temperature (C): 30.0
-Condition: Partly cloudy
-Wind Speed (kph): 15.8
-Humidity: 70
-Feels Like (C): 33.0
+Local Time: 2025-10-05 11:22
+Temperature (C): 31.4
+Condition: Sunny
+Wind Speed (kph): 9.2
+Humidity: 48
+Feels Like (C): 33.1
 ```
 
 ---
 
-## 📁 Files
-- `weather_app.py` — main script (provided)
-
----
-
-## 📜 License
-This repository is a good fit for the **MIT License**. Add a `LICENSE` file with the MIT text if you want to make it open-source and permissive.
+## 🌟 Learning Outcome
+This project helped me learn:
+- Working with **APIs** in Python.
+- Parsing **JSON responses**.
+- Handling **errors** and **user input** gracefully.
+- Writing clean, reusable functions.
 
 ---
 
 ## 🤝 Contributing
-Feel free to open issues or submit PRs. For small scripts like this, keep changes focused, add tests for new features, and update the README with usage examples.
+Pull requests are welcome!  
+If you have suggestions to improve this project, feel free to **fork** and submit a PR.
 
 ---
 
-## ✅ Repo name suggestions
-- `cli-weather-app`
-- `simple-weather-cli`
-- `weather-api-demo`
-- `py-weather-tool`
+## 📄 License
+This project is licensed under the **MIT License** – feel free to use, modify, and share it.
 
 ---
 
-If you want, I can also:
-- Turn the script into a more robust CLI with `argparse`.
-- Create a GitHub-ready repo structure (`README`, `LICENSE`, `.gitignore`, `requirements.txt`).
-- Add a ready-to-use `README.md` file tailored to your preferred repo name and license.
-
+💡 *Made with ❤️ while practicing API integration in Python.*
